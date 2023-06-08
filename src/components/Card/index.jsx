@@ -1,39 +1,41 @@
-import { useState, useEffect } from "react"
-import Partidos from "../Partidos";
 import '../../scss/Partidos.scss';
 
-const Card = () => {
+const Card = ({ match }) => {
+	return (
+		<div className="partidos__partido flex--row w-100">
+			<p>{match.teams.home.name}</p>
+			<img
+				src={match.teams.home.logo}
+				alt={match.teams.home.name}
+				className="logo"
+			/>
+			<div className="marcador flex--col">
+				{match.fixture.status.long != 'finished' ? (
+					<>
+						<p className="fw-400">{match.fixture.status.long}</p>
+						<p>{match.fixture.status.elapsed}</p>
+						<span className="btn btn-sec--dark">
+							{match.goals.home}:{match.goals.away}
+						</span>
+						<button className="btn btn--primary">Hacer pronóstico</button>
+					</>
+				) : (
+					<>
+						<p className="fw-400">{match.fixture.status.long}</p>
+						<p className="btn btn-sec--dark-outline">
+							{match.goals.home}:{match.goals.away}
+						</p>
+					</>
+				)}
+			</div>
+			<img
+				src={match.teams.away.logo}
+				alt={match.teams.away.name}
+				className="logo"
+			/>
+			<p>{match.teams.away.name}</p>
+		</div>
+	);
+};
 
-    const [result, setResult] = useState(null);
-
-    useEffect(() => {
-        fetch("https://api-football-v1.p.rapidapi.com/v3/fixtures?live=all", {
-            headers: {
-                "X-RapidAPI-Key": import.meta.env.VITE_KEY,
-                "X-RapidAPI-Host": "api-football-v1.p.rapidapi.com"
-            }
-        }).then(response => response.json())
-            .then((data) => {
-                setResult(data.response)
-            }).catch((error) => {
-                console.log(error)
-            })
-    }, []);
-
-    return (
-        <>
-            <h1 className="partidos__title">PARTIDOS</h1>
-            <button className="btn btn-sec--light">Seleccionar liga</button>
-            {
-                result ? (
-                    result.map((match) => (
-                        <Partidos match={match} key={match.fixture.id} />
-                    ))
-                )
-                    : <div>Loading...</div>
-            }
-        </>
-    )
-}
-
-export default Card
+export default Card;

@@ -1,13 +1,13 @@
 import './index.scss'
 import Navbar from './components/Navbar'
-import Card from './components/Card'
+import Partidos from './components/Partidos'
 
 function App() {
 
   return (
     <>
       <Navbar />
-      <Card />
+      <Partidos />
     </>
   )
 }
