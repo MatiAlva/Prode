@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&family=Reem+Kufi:wght@400;500;600;700&display=swap');
+
+$readex: 'Readex Pro', sans-serif;
+$reem-kufi: 'Reem Kufi', sans-serif;
+
+body {
+	font-family: $readex;
+	font-size: 1.125rem;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.flex {
+	display: flex;
+	gap: var(--gap, 1rem);
+}
+
+.btn {
+	border-radius: 15px;
+	text-transform: uppercase;
+	padding: 10px;
+  cursor: pointer;
+}
+
+.btn--primary {
+	color: #2ef2df;
+	background-color: #062340;
+}
