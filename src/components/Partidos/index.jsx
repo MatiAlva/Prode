@@ -5,7 +5,6 @@ function Partidos({ match }) {
             <main>
                 <section>
                     <div className="partidos__dia w-100">
-                        {/* Convertir el match.fixture.date en un horario estado unidense */}
                         <h3 className="fw-400">{match.fixture.date}</h3>
                         <div className="partidos__partido flex--row w-100">
                             <p>{match.teams.home.name}</p>
@@ -16,8 +15,9 @@ function Partidos({ match }) {
                                         match.fixture.status.long != 'finished' ? (
                                             <>
                                                 <p className="fw-400">{match.fixture.status.long}</p>
-                                                <p style={{ color: 'green' }}>{match.fixture.status.elapsed}</p>
-                                                <p className="btn btn-sec--dark-outline">{match.goals.home}:{match.goals.away}</p>
+                                                <p>{match.fixture.status.elapsed}</p>
+                                                <p className="btn btn-sec--dark">{match.goals.home}:{match.goals.away}</p>
+                                                <button className="btn btn--primary">Hacer pronóstico</button>
                                             </>
                                         ) : (
                                             <>
