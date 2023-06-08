@@ -2,10 +2,10 @@ import '../../scss/Navbar.scss';
 
 function Navbar() {
 	return (
-		<header className="primary-header flex">
+		<header className="primary-header flex--row">
 			<a className="navlink brand fw-700">PRODE</a>
 			<nav>
-				<ul className="navbar flex">
+				<ul className="navbar flex--row">
 					<li>
 						<a className="navlink">Inicio</a>
 					</li>

@@ -4,11 +4,10 @@
 	align-items: center;
 	justify-content: space-between;
 	max-width: 100%;
-	padding: 0.5rem 1rem;
 }
 
 .navbar {
-  --gap: 4rem;
+	--gap: 4rem;
 	align-items: center;
 	list-style: none;
 }
@@ -16,7 +15,7 @@
 .navlink {
 	font-size: 1.5rem;
 	color: #17842b;
-  cursor: pointer;
+	cursor: pointer;
 }
 
 .brand {
