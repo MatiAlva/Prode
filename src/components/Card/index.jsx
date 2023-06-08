@@ -9,7 +9,7 @@ const Card = () => {
     useEffect(() => {
         fetch("https://api-football-v1.p.rapidapi.com/v3/fixtures?live=all", {
             headers: {
-                "X-RapidAPI-Key": import.meta.env.VITE_KEY,
+                "X-RapidAPI-Key": import.meta.env.KEY,
                 "X-RapidAPI-Host": "api-football-v1.p.rapidapi.com"
             }
         }).then(response => response.json())
