@@ -1,0 +1,39 @@
+@use '../index';
+
+main > * {
+  margin: 0;
+}
+
+.partidos__title {
+  text-decoration: underline;
+}
+
+.partidos__dia {
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: #f1f1f1;
+  padding: 0.8rem;
+  margin: 1rem 0;
+}
+
+.partidos__partido {
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1.5px solid #064011;
+  padding: 0.5rem 0;
+}
+
+.marcador > * {
+  margin: 0;
+  padding: 0;
+}
+
+.marcador {
+  --gap: 0.1rem;
+  align-items: center;
+}
+
+.logo{
+  width: 4rem;
+  height: 4rem;
+}

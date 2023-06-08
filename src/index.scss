@@ -7,27 +7,63 @@ body {
 	font-family: $readex;
 	font-size: 1.125rem;
 	margin: 0;
-	padding: 0;
+	padding: 0 1rem;
 	box-sizing: border-box;
+  color: #064011;
 }
+
+/* Utility classes */
 
 .fw-700 {
-    font-weight: 700;
+	font-weight: 700;
 }
 
-.flex {
+.fw-400 {
+  font-weight: 400;
+}
+
+.flex--col {
 	display: flex;
+  flex-direction: column;
 	gap: var(--gap, 1rem);
 }
 
+.flex--row {
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap, 1rem);
+}
+
+.w-100 {
+  width: 100%;
+}
+
+/* Botones */
+
 .btn {
-	border-radius: 15px;
+	border-radius: 10px;
 	text-transform: uppercase;
 	padding: 10px;
-  cursor: pointer;
+	cursor: pointer;
+  border: none;
 }
 
 .btn--primary {
 	color: #2ef2df;
 	background-color: #062340;
+}
+
+.btn-sec--light {
+  color: #064011;
+  background-color: #b6f3c1;
+}
+
+.btn-sec--dark {
+  background-color: #064011;
+  color: #b6f3c1;
+}
+
+.btn-sec--dark-outline {
+  border: 1.5px solid #064011;
+  color: #064011;
 }
